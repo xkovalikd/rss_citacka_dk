@@ -1,0 +1,11 @@
+<p>Pridaj nový feed</p>
+<input class="FeedInput" [(ngModel)]="name" placeholder="Napíš názov feedu...">
+<input class="FeedInput" [(ngModel)]="link" placeholder="Vlož RSS url...">
+<button id="addFeedBtn" (click)="addFeeds(name,link)" class="btn btn-primary">Načítaj feed</button>
+<hr>
+<ul>
+  <li id="myFeed" class="d-block mt-2" *ngFor="let entry of myFeeds;let i = index">
+    <p class="d-inline-block">{{entry.name}}</p>
+  </li>
+</ul>
+<hr>
